@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import Star from './Star';
+import './Space.css';
 
 const STAR_SIZE = 8;
 
@@ -8,7 +9,7 @@ const getRandomPosition = () => ({
   y: Math.random() * (window.innerHeight - STAR_SIZE),
 });
 
-const Space = () => {
+const Space = ({onReturnToTitle}) => {
   const [stars, setStars] = useState([]);
 
   // Add a new star at a random position
@@ -33,6 +34,7 @@ const Space = () => {
 
   return (
     <div className="space">
+        <button className='return-button' onClick={onReturnToTitle}>Return to Title Screen</button>
       {stars.map((star) => (
         <Star
           key={star.id}

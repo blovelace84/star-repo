@@ -8,7 +8,7 @@ const App = () => {
   return(
     <div className="app">
       {hasStarted ? (
-        <Space />
+        <Space onReturnToTitle={() => setHasStarted(false)} />
       ) : (
         <TitleScreen onStart={() => setHasStarted(true)} />
       )}
