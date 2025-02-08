@@ -6,7 +6,7 @@ import TitleScreen from "./components/TitleScreen";
 const App = () => {
   const [hasStarted, setHasStarted] = useState(false);
   useEffect(() => {
-    document.title = hasStarted ? 'Star Destroyer!!' : 'Shoot the Stars!!';
+    document.title = hasStarted ? 'Shoot the Stars!!' : 'Star Destroyer!!';
   }, [hasStarted]);
   return(
     <div className="app">
